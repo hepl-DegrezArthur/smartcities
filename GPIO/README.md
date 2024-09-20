@@ -16,7 +16,7 @@ Explications du code :
 -  On commmence par vérifier si le bouton est appuyé, si oui la variable count est incrémentée.
 -  Si on appuie de nouveau sur le boutton poussoir, la variable sera incrémentée à 2 mais sera rénitialisée par le elif qui suit.
 -  L'état de la varialbe count (1 ou 0) défini l'état de la LED.
- Cette méthode permet que lorsque le bouton est appuyé, la LED s'allume. Si il est à nouveau appuyé, la LED s'éteint et ainsi de suite. 
+Cette méthode permet que lorsque le bouton est appuyé, la LED s'allume. Si il est à nouveau appuyé, la LED s'éteint et ainsi de suite. 
 
 
   ![image](https://github.com/user-attachments/assets/b5f0d874-1e4e-4ab2-a0d9-b97be2b2b8e3)
