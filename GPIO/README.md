@@ -1,6 +1,6 @@
 About RPI Pico W ...
 
-Afin de prendre en main l'utilisation d'un RPI Pico W et sa programmation en uPython, ces quelques tâches ont étés réalisées : 
+Afin de prendre en main le RPI Pico W et sa programmation en uPython, ces quelques tâches ont étés réalisées : 
 
 - Installation de la dernière mise à jour du fichier uPython dans le RPI
 - Prise en main du logiciel Thonny
