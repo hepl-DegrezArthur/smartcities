@@ -1,0 +1,2 @@
+# smartcities
+MicroPython course
