@@ -1,5 +1,4 @@
-J'ai personnelement utilisé l'interruption d'un timer afin de créé les délai de la LED. Afin de changer ce délai je redéfini mon interruption avec une valeur de compteur différente 
-  ==> Il peut être interressant d'utiliser la fonction présentée par le prof : time.ticks_ms() et time.ticks_diff()
+J'ai personnelement utilisé l'interruption d'un timer afin de créé les délai de la LED. Afin de changer ce délai je redéfini mon interruption avec une valeur de compteur différente Il peut être interressant d'utiliser la fonction présentée par le prof : time.ticks_ms() et time.ticks_diff()
 
 
 Le script commence par importer les bibliothèques nécessaires, notamment pour gérer un écran LCD, effectuer des temporisations, interagir avec le matériel comme les broches GPIO et le PWM pour le buzzer, et lire les données d'un capteur DHT11 qui mesure la température et l'humidité.
