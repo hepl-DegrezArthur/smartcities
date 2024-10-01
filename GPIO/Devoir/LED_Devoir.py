@@ -44,15 +44,4 @@ while True:
         utime.sleep(0.5)
     while i==5:
         LED.value(0)
-
-"""
-# Boucle principale
-while True:
-    if i!=1:
-        LED.toggle()
-        utime.sleep(0.1*i*2)
-    
-    else:
-        LED.value(0)
-"""
         
