@@ -18,3 +18,5 @@ Explications du code :
 -  L'état de la varialbe count (1 ou 0) défini l'état de la LED.
 
 Cette méthode permet que lorsque le bouton est appuyé, la LED s'allume. Si il est à nouveau appuyé, la LED s'éteint et ainsi de suite. 
+
+![GPIO1](https://github.com/user-attachments/assets/cead44f2-921e-4d6f-a7bc-c24c93582770)
