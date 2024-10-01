@@ -6,4 +6,4 @@ Une fonction de routine d'interruption est définie pour gérer les pressions su
 
 Une interruption est configurée pour détecter les pressions du bouton. Dans une boucle infinie, le code vérifie la valeur de "i" et fait clignoter la LED de différentes manières selon cette valeur : un clignotement rapide, un clignotement lent, des variations, ou la LED éteinte. Le code commenté à la fin propose une autre méthode de contrôle de la LED, mais celle-ci n'est pas utilisée. En somme, le code ajuste le comportement de la LED en fonction des interactions avec le bouton.
 
-![GPIO](https://github.com/user-attachments/assets/6d0f57e3-f2dd-4e18-b9d9-268e0b32c5d4)
+![GPIODEVOIR](https://github.com/user-attachments/assets/38092805-af87-468e-8e85-7fa17f7cfd17)
