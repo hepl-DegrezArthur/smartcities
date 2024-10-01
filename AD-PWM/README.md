@@ -4,7 +4,7 @@ Le script commence par importer des bibliothèques nécessaires. utime est utili
 
 Il initialise ensuite le buzzer sur la broche GPIO 18 et configure un ADC sur la broche 1 pour lire un potentiomètre, qui contrôle le volume. Deux variables sont définies : NWait, qui détermine le temps d'attente entre les notes, et VPot, qui fixe le volume initial.
 
-Une fonction d'interruption appelée routine est définie pour mettre à jour VPot en lisant régulièrement la valeur du potentiomètre. Un temporisateur est ensuite configuré pour appeler cette fonction toutes les 10 millisecondes.
+Une fonction d'interruption appelée routine est définie pour mettre à jour VPot en lisant régulièrement la valeur du potentiomètre. Cette interruption est défini sur un timer qui attend 10ms avant de déclencher l'interruption.
 
 Le code définit des fonctions pour chaque note musicale (DO, RE, MI, FA, SOL, LA, SI). Chacune de ces fonctions configure la fréquence du buzzer pour la note correspondante, définit le volume à partir de VPot, joue la note pendant une durée spécifiée, puis éteint le buzzer.
 
