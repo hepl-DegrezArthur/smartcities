@@ -12,7 +12,6 @@ NWait = 0.07	#Attente pour couper les notes
 VPot = 1000		#Volume au démarrage du programme
 
 dht = DHT(16)
-temp, humid = dht.readTempHumid()
 
 i2c = I2C(1, scl=Pin(7), sda=Pin(6), freq=400000)  # I2C conf pin
 d = LCD1602(i2c, 2, 16)                            # Data info
@@ -80,7 +79,6 @@ def Nope(delai):
     buzzer.duty_u16(1)
     sleep(delai)
 
-# Version améliorée de la chanson "Joyeux Anniversaire"
 def BirthdaySong():
     SOL(0.3)  # Happy (G)
     Nope(NWait)
