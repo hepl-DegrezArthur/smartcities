@@ -2,16 +2,14 @@ J'ai personnelement utilisé l'interruption d'un timer afin de créé les délai
   ==> Il peut être interressant d'utiliser la fonction présentée par le prof : time.ticks_ms() et time.ticks_diff()
 
 
-Le script commence par importer les bibliothèques nécessaires pour contrôler un écran LCD, gérer les temporisations, interagir avec le matériel (comme les broches GPIO et les périphériques ADC), et lire des données d'un capteur DHT11 (qui mesure la température et l'humidité).
+Le script commence par importer les bibliothèques nécessaires, notamment pour gérer un écran LCD, effectuer des temporisations, interagir avec le matériel comme les broches GPIO et le PWM pour le buzzer, et lire les données d'un capteur DHT11 qui mesure la température et l'humidité.
 
-Ensuite, il définit une entrée analogique pour un potentiomètre, initialise un buzzer sur la broche GPIO 18, et fixe quelques variables pour le délai entre les notes et le volume initial. Le capteur DHT est également initialisé, et la température et l'humidité sont lues immédiatement.
+Ensuite, une entrée analogique est définie pour un potentiomètre, et un buzzer est initialisé sur la broche GPIO 18. Des variables sont créées pour gérer le délai entre les notes et définir le volume initial. Le capteur DHT11 est initialisé pour lire les valeurs de température et d'humidité.
 
-Le code configure une interface I2C pour communiquer avec l'écran LCD, spécifiant les broches de données et d'horloge, puis initialise l'écran pour afficher des informations.
+Le code configure également l'interface I2C pour communiquer avec l'écran LCD, spécifiant les broches de données et d'horloge. L'écran est ensuite initialisé pour afficher des informations.
 
-Des fonctions sont définies pour chaque note musicale (DO, RE, MI, FA, SOL, LA, SI), permettant de jouer ces notes en réglant la fréquence et le volume du buzzer, puis en jouant la note pendant une durée spécifiée. Une fonction Nope() est aussi incluse pour couper le son.
+Des fonctions sont définies pour chaque note musicale (DO, RE, MI, FA, SOL, LA, SI), permettant de jouer ces notes en réglant la fréquence et le volume du buzzer, puis en jouant la note pendant une durée spécifiée. Une fonction Nope() est incluse pour couper le son. (code repris du labo PWM)
 
-La fonction BirthdaySong() joue la mélodie de "Joyeux Anniversaire", en appelant les fonctions de note avec des délais pour créer la séquence musicale.
+La fonction BirthdaySong() joue la mélodie de "Joyeux Anniversaire", en appelant les fonctions de note avec des délais appropriés pour créer la séquence musicale.
 
-Dans la boucle principale, le script lit régulièrement la température et l'humidité du capteur DHT, affiche ces valeurs sur l'écran LCD, et si la température dépasse 30 degrés ou l'humidité dépasse 45 %, la chanson "Joyeux Anniversaire" est jouée.
-
-Ainsi, ce code combine la lecture de données environnementales avec des capacités sonores, affichant les mesures sur un écran LCD et jouant une mélodie en fonction des conditions ambiantes.
+Dans la boucle principale, le script lit régulièrement la température et l'humidité du capteur DHT11, affiche ces valeurs sur l'écran LCD, puis, si la température dépasse 30 degrés ou l'humidité dépasse 45 %, la chanson "Joyeux Anniversaire" est jouée.
