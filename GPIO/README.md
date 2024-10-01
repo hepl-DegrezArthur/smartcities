@@ -19,4 +19,4 @@ Explications du code :
 
 Cette méthode permet que lorsque le bouton est appuyé, la LED s'allume. Si il est à nouveau appuyé, la LED s'éteint et ainsi de suite. 
 
-![GPIO1](https://github.com/user-attachments/assets/cead44f2-921e-4d6f-a7bc-c24c93582770)
+![GPIO1](https://github.com/user-attachments/assets/0f1a2030-31b7-4ba9-a80a-dc69d82983ab)
