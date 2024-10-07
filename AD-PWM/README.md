@@ -1,3 +1,5 @@
+# AD - PWM
+
 Cette partie conciste à apprendre à utiliser les convertisseurs analogique/numérique et à utiliser le PWM :
 
 Le script commence par importer des bibliothèques nécessaires. utime est utilisé pour les temporisations, comme sleep(), tandis que machine permet d'interagir avec le matériel, notamment les broches GPIO, la modulation de largeur d'impulsion (PWM) pour le buzzer, les temporisateurs (Timer) et la lecture de valeurs analogiques (ADC).
@@ -11,3 +13,5 @@ Le code définit des fonctions pour chaque note musicale (DO, RE, MI, FA, SOL, L
 La fonction BirthdaySong() joue les notes dans l'ordre pour la chanson "Joyeux Anniversaire", en insérant des pauses entre les notes. De manière similaire, MarioSong() joue une séquence de notes inspirée de Mario.
 
 Enfin, une boucle infinie est mise en place pour jouer alternativement les deux chansons, avec une pause d'une seconde entre chaque répétition. Cela permet de jouer des mélodies simples en utilisant un buzzer et un potentiomètre pour ajuster le volume. Les fonctions de notes sont conçues de manière modulaire pour faciliter l'ajout de nouvelles mélodies à l'avenir.
+
+![image](https://github.com/user-attachments/assets/14cc446f-4b33-42f6-8299-7ee81f02df08)
