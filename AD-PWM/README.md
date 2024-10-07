@@ -2,6 +2,7 @@
 
 Cette partie conciste à apprendre à utiliser les convertisseurs analogique/numérique et à utiliser le PWM :
 
+## Explications du code 
 Le script commence par importer des bibliothèques nécessaires. utime est utilisé pour les temporisations, comme sleep(), tandis que machine permet d'interagir avec le matériel, notamment les broches GPIO, la modulation de largeur d'impulsion (PWM) pour le buzzer, les temporisateurs (Timer) et la lecture de valeurs analogiques (ADC).
 
 Il initialise ensuite le buzzer sur la broche GPIO 18 et configure un ADC sur la broche 1 pour lire un potentiomètre, qui contrôle le volume. Deux variables sont définies : NWait, qui détermine le temps d'attente entre les notes, et VPot, qui fixe le volume initial.
@@ -14,4 +15,5 @@ La fonction BirthdaySong() joue les notes dans l'ordre pour la chanson "Joyeux A
 
 Enfin, une boucle infinie est mise en place pour jouer alternativement les deux chansons, avec une pause d'une seconde entre chaque répétition. Cela permet de jouer des mélodies simples en utilisant un buzzer et un potentiomètre pour ajuster le volume. Les fonctions de notes sont conçues de manière modulaire pour faciliter l'ajout de nouvelles mélodies à l'avenir.
 
+## FlowChart Diagramme
 ![image](https://github.com/user-attachments/assets/14cc446f-4b33-42f6-8299-7ee81f02df08)
