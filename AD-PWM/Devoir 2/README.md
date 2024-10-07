@@ -16,5 +16,6 @@ La fonction BirthdaySong() joue les notes dans l'ordre pour la chanson "Joyeux A
 Enfin, une boucle infinie est mise en place pour jouer alternativement les deux chansons, avec une pause d'une seconde entre chaque répétition. Cela permet de jouer des mélodies simples en utilisant un buzzer et un potentiomètre pour ajuster le volume. Les fonctions de notes sont conçues de manière modulaire pour faciliter l'ajout de nouvelles mélodies à l'avenir.
 
 ## FlowChart Diagramme
-![image](https://github.com/user-attachments/assets/4ac526fb-3340-475b-ba2b-d14a999872ad)
+![image](https://github.com/user-attachments/assets/d20f3a2f-e259-4554-8a44-a566a2bd3b40)
+
 
