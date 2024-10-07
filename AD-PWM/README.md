@@ -11,14 +11,3 @@ Le code définit des fonctions pour chaque note musicale (DO, RE, MI, FA, SOL, L
 La fonction BirthdaySong() joue les notes dans l'ordre pour la chanson "Joyeux Anniversaire", en insérant des pauses entre les notes. De manière similaire, MarioSong() joue une séquence de notes inspirée de Mario.
 
 Enfin, une boucle infinie est mise en place pour jouer alternativement les deux chansons, avec une pause d'une seconde entre chaque répétition. Cela permet de jouer des mélodies simples en utilisant un buzzer et un potentiomètre pour ajuster le volume. Les fonctions de notes sont conçues de manière modulaire pour faciliter l'ajout de nouvelles mélodies à l'avenir.
-
-
-
-```mermaid
-graph TD
-    Start[Start] --> CheckX{X > 5 ?}
-    CheckX -->|Yes| Large[Print "x est grand"]
-    CheckX -->|No| Small[Print "x est petit"]
-    Large --> End[End]
-    Small --> End[End]
-
