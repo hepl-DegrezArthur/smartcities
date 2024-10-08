@@ -1,5 +1,8 @@
 # LCD - DHT11
 
+## Connexions sur Raspberry Pico W
+![nonnon](https://github.com/user-attachments/assets/091be7ca-32ce-459b-8f74-4f0d11211b7e)
+
 ## Explications du code 
 Le script commence par importer les bibliothèques nécessaires, notamment pour gérer un écran LCD, effectuer des temporisations, interagir avec le matériel comme les broches GPIO et le PWM pour le buzzer, et lire les données d'un capteur DHT11 qui mesure la température et l'humidité.
 
