@@ -1,5 +1,9 @@
 # Devoir LCD-DHT11
 
+## Connexions sur Raspberry Pico W
+![nonnon](https://github.com/user-attachments/assets/d40cd7b3-6c02-427d-99f0-90a8bb33bae0)
+
+
 ## Explications du code 
 Le système surveille en continu la température et l'humidité ambiantes, et ajuste le comportement de la LED et du buzzer en fonction d'une température de référence réglée par le potentiomètre. Plusieurs bibliothèques sont utilisées : lcd1602 pour l'affichage sur écran LCD via I2C, utime pour la gestion du temps, machine pour interagir avec les périphériques matériels (I2C, ADC, PWM, Timer, GPIO), et dht11 pour lire les valeurs de température et d'humidité. La LED est connectée à la broche GPIO 20 et sert de retour visuel. Le buzzer est connecté à la broche GPIO 18 via PWM pour la sortie sonore. Le potentiomètre est connecté à la broche ADC 0 et permet de définir la température de référence (Vset). Le capteur DHT11 est connecté à la broche GPIO 16 pour mesurer la température et l'humidité. 
 
