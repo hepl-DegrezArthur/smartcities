@@ -1,6 +1,9 @@
 # Gpio - Devoir
 Devoir sur les GPIO afin de prendre en main la programmation du RPI Pico
 
+## Connexions sur Raspberry Pico W
+![image](https://github.com/user-attachments/assets/ce6d5441-9eb3-4c42-80f6-9a377d2a9071)
+
 ## Explications du code 
 Le code commence par importer des bibliothèques pour interagir avec le matériel et gérer le temps. Ensuite, il définit une broche pour la LED comme sortie et une autre pour le bouton comme entrée, avec une résistance de tirage vers le bas.
 Une variable "i" détermine le mode de clignotement de la LED. 
