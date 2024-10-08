@@ -6,6 +6,7 @@ Le Raspberry Pi Pico W est une version évoluée du Raspberry Pi Pico, avec l'aj
 
 ## Spécificités du Raspberry Pi Pico W
 Le Raspberry Pi Pico W est doté de plusieurs systèmes de communication, de plusieurs convertisseurs analogiques/numériques (A/N), ainsi que de sorties PWM (Pulse Width Modulation) pour contrôler des composants externes. Vous pouvez consulter ses spécifications matérielles plus en détail grâce à l'image ci-dessous :
+  ![image](https://github.com/user-attachments/assets/b5f0d874-1e4e-4ab2-a0d9-b97be2b2b8e3)
 
 ## Langage de programmation
 Pour une programmation facile et efficace, MicroPython s'avère être une solution optimale. Il est largement documenté et propose de nombreuses bibliothèques qui simplifient l'utilisation des différentes fonctionnalités du microcontrôleur.
