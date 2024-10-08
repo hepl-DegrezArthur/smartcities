@@ -3,7 +3,7 @@
 Cette partie conciste à apprendre à utiliser les convertisseurs analogique/numérique et à utiliser le PWM :
 
 ## Connexions sur Raspberry Pico W
-![image](https://github.com/user-attachments/assets/2d425a55-ffc1-4555-8d0f-7a6988c652fb)
+![ouioui](https://github.com/user-attachments/assets/195a9349-c049-4597-8dcb-c7f32d57b167)
 
 ## Explications du code 
 Le script commence par importer des bibliothèques nécessaires. utime est utilisé pour les temporisations, comme sleep(), tandis que machine permet d'interagir avec le matériel, notamment les broches GPIO, la modulation de largeur d'impulsion (PWM) pour le buzzer, les temporisateurs (Timer) et la lecture de valeurs analogiques (ADC).
