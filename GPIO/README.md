@@ -7,7 +7,7 @@ Afin de prendre en main le RPI Pico W et sa programmation en uPython, ces quelqu
 - Contrôle d'un bouton poussoir
 - Utilisation d'un bouton poussoir et d'une LED en même temps avec différents programmes
 
-## Connexions sur uPython
+## Connexions sur Raspberry Pico W
 ![image](https://github.com/user-attachments/assets/ce6d5441-9eb3-4c42-80f6-9a377d2a9071)
 
 ## Explications du code
