@@ -3,6 +3,7 @@ Ce code a pour but de trouver le BPM d'une musique à l'aide d'un capteur de son
 
 
 ## Connexions sur Raspberry Pico W
+![Sans titre](https://github.com/user-attachments/assets/6bdcbd82-7b3d-46be-8e75-c1b7141be311)
 
 
 
