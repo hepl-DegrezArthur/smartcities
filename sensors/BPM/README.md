@@ -21,7 +21,8 @@ Dans la boucle principale infinie, le code utilise la fonction SoundSensorAverag
 Une couleur aléatoire est alors choisie dans la liste colors et appliquée à la LED NeoPixel pour signaler visuellement le battement. La valeur de RefNoise est mise à jour avec la valeur de bruit actuelle, et le programme attend 50 ms avant de reprendre la boucle, permettant ainsi des pauses entre chaque détection de battement.
 
 ## FlowChart Diagramme
-![image](https://github.com/user-attachments/assets/58eb83c0-ac34-46f5-9a66-9577fe982278)
+![image](https://github.com/user-attachments/assets/33ed7708-f955-4f4a-8520-12a3f12c4670)
+
 
 
 
