@@ -15,7 +15,7 @@ Le code définit ensuite plusieurs couleurs en tant que tuples RGB. Par exemple,
 
 Le capteur de lumière est initialisé avec la variable Lsensor, utilisant l’entrée analogique ADC(0), et le capteur sonore avec la variable Ssensor, utilisant ADC(1).
 
-La variable Mnoise est initialisée à zéro et sert à stocker une moyenne des valeurs du capteur sonore, pour réduire le bruit aléatoire.
+La variable Mnoise est initialisée à zéro et sert à stocker une moyenne des valeurs du capteur sonore afin de réduire le bruit aléatoire.
 
 La fonction SensorAverage est définie pour obtenir une moyenne des valeurs lues par le capteur sonore. Elle lit mille valeurs avec une pause d’une microseconde entre chaque lecture, puis elle calcule la moyenne de ces valeurs et la stocke dans la variable Mnoise. Cela permet de réduire le bruit en moyenne sur une série de lectures.
 
