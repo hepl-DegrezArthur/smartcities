@@ -1,5 +1,5 @@
 # RGB - SoundSensor
-Ce code a pour but de détecter le bpm d'une musique à l'aide d'un capteur de son. Il modifie ensuite la couleur d'une LED RGB afin de montrer lorsqu'un battement a été interrprêté.
+Ce code a pour but de trouver le BPM d'une musique à l'aide d'un capteur de son. Il modifie ensuite la couleur d'une LED RGB afin de montrer lorsqu'un battement a été interrprêté.
 
 
 ## Connexions sur Raspberry Pico W
@@ -15,11 +15,12 @@ Le capteur sonore est initialisé avec la variable Ssensor, utilisant l’entré
 
 La fonction SoundSensorAverage est définie pour obtenir une moyenne de bruit en faisant 1000 lectures du capteur sonore avec une pause d’une microseconde entre chaque lecture. La moyenne obtenue est retournée pour réduire les variations rapides dans les mesures.
 
-Dans la boucle principale infinie, le code utilise la fonction SoundSensorAverage pour obtenir une moyenne de bruit. Il compare ensuite cette valeur avec RefNoise pour voir si le changement dépasse le seuil Vbattement. Si c’est le cas, un battement est détecté, et le code capture le temps actuel en millisecondes dans CurrentTime. Il calcule ensuite le temps écoulé depuis le dernier battement, stocké dans VTime. Si ce délai est supérieur à 300 ms (pour éviter les détections multiples causées par les sons parasites), le code calcule la fréquence cardiaque en BPM comme 60000 divisé par VTime et affiche le résultat.
+Dans la boucle principale infinie, le code utilise la fonction SoundSensorAverage pour obtenir une moyenne de bruit. Il compare ensuite cette valeur avec RefNoise pour voir si le changement dépasse le seuil Vbattement. Si c’est le cas, un battement est détecté, et le code capture le temps actuel en millisecondes dans CurrentTime. Il calcule ensuite le temps écoulé depuis le dernier battement, stocké dans VTime. Si ce délai est supérieur à 300 ms (pour éviter les détections multiples causées par les sons parasites), le code calcule le BPM et affiche le résultat.
 
 Une couleur aléatoire est alors choisie dans la liste colors et appliquée à la LED NeoPixel pour signaler visuellement le battement. La valeur de RefNoise est mise à jour avec la valeur de bruit actuelle, et le programme attend 50 ms avant de reprendre la boucle, permettant ainsi des pauses entre chaque détection de battement.
 
 ## FlowChart Diagramme
+![image](https://github.com/user-attachments/assets/58eb83c0-ac34-46f5-9a66-9577fe982278)
 
 
 
