@@ -21,4 +21,6 @@ Niveau de batterie :
 - Mode présence - Lorsque le capteur PIR détecte un mouvement, le niveau de la batterie est associé à chaque photo capturée.
 
 Diagramme représentant le fonctionnement du système : 
+![image](https://github.com/user-attachments/assets/c9697f7c-cb90-435d-8cbe-d75e76c01bf4)
+
 
