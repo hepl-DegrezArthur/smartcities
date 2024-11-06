@@ -3,7 +3,7 @@ Ce code à pour objectif de faire varier la lumière d'une LED RGB en fonction d
 
 
 ## Connexions sur Raspberry Pico W
-
+![image](https://github.com/user-attachments/assets/659836fe-fc41-4416-994d-0b89e107374d)
 
 
 ## Explications du code 
