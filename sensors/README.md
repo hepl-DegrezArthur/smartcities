@@ -1,5 +1,5 @@
 # RGB - SoundSensor
-Ce code à pour objectif de faire fonctionner une LED RGB en fonction du bruit ambiant à l'aide d'un capteur de son.
+Ce code à pour objectif de faire varier la lumière d'une LED RGB en fonction d'un capteur de son et de lumière.
 
 
 ## Connexions sur Raspberry Pico W
