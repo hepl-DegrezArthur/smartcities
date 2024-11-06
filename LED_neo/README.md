@@ -1,5 +1,5 @@
 # RGB - SoundSensor
-
+Ce code à pour objectif de faire fonctionner une LED RGB en fonction du bruit ambiant à l'aide d'un capteur de son.
 
 
 ## Connexions sur Raspberry Pico W
@@ -26,4 +26,6 @@ Si la valeur de lumière est inférieure à 30000 ou que la valeur moyenne du ca
 En résumé, le programme allume la LED NeoPixel en blanc lorsque le niveau de lumière est faible ou que le bruit dépasse un certain seuil, sinon il allume la LED en rouge.
 
 ## FlowChart Diagramme
+![image](https://github.com/user-attachments/assets/5669c573-123e-4858-a72b-38ad8c66c982)
+
 
