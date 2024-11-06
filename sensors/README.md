@@ -28,8 +28,3 @@ En résumé, le programme allume la LED NeoPixel en blanc lorsque le niveau de l
 ## FlowChart Diagramme
 ![image](https://github.com/user-attachments/assets/5669c573-123e-4858-a72b-38ad8c66c982)
 
-
-
-
-![462554686_1227971741847511_1417337695230429912_n](https://github.com/user-attachments/assets/872b8142-be81-4e7e-982e-85c447253cc2)
-
