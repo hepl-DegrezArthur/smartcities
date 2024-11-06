@@ -18,7 +18,7 @@ Transmission des données :
 
 Niveau de batterie : 
 - Mode standby - En absence de mouvement dans le nichoir, le système se réveille une seule fois par jour et envoie le niveau de la batterie en MQTT.
-- Mode présence - Lorsque le capteur PIR détecte un mouvement, le niveau de la batterie est associé à chaque photo capturée.
+- Mode présence - Lorsque le capteur PIR détecte un mouvement, le niveau de la batterie est associé à chaque photo capturée et envoyé en même temps que la photo.
 
 Diagramme représentant le fonctionnement du système : 
 ![image](https://github.com/user-attachments/assets/c9697f7c-cb90-435d-8cbe-d75e76c01bf4)
