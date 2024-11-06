@@ -1,10 +1,12 @@
+# RGB - SoundSensor
 
 
 
+## Connexions sur Raspberry Pico W
 
 
 
-
+## Explications du code 
 La première partie du code importe les bibliothèques nécessaires. La bibliothèque neopixel est utilisée pour contrôler les LEDs NeoPixel, tandis que utime et machine gèrent le temps et les composants matériels (ports GPIO, ADC, etc.).
 
 Ensuite, le code initialise la LED RGB. La variable Led représente le pin connecté à la LED NeoPixel, ici GP18. La variable Neopixel initialise la LED NeoPixel sur ce pin, avec un seul pixel.
@@ -22,3 +24,6 @@ Le bloc while True est une boucle infinie qui exécute en continu le programme. 
 Si la valeur de lumière est inférieure à 30000 ou que la valeur moyenne du capteur sonore Mnoise dépasse 9000, la LED RGB est allumée en blanc. Sinon, elle est allumée en rouge. La fonction sleep(0.1) introduit une pause de 100 ms entre chaque itération.
 
 En résumé, le programme allume la LED NeoPixel en blanc lorsque le niveau de lumière est faible ou que le bruit dépasse un certain seuil, sinon il allume la LED en rouge.
+
+## FlowChart Diagramme
+
