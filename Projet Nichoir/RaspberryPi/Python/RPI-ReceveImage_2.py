@@ -5,16 +5,16 @@ import io
 import time
 
 # Paramètres du broker MQTT
-mqtt_broker = "192.168.1.26"  # Remplacez par l'adresse IP de votre broker
-mqtt_port = 1883                # Port par défaut pour MQTT
-mqtt_topic_Photos = "ProjetNichoir_Photos"     # Nom du topic pour recevoir l'image
+mqtt_broker = "192.168.1.26"  
+mqtt_port = 1883              
+mqtt_topic_Photos = "ProjetNichoir_Photos"    
 
 # Identifiants pour la connexion
-mqtt_user = "RaspberryAD"        # Remplacez par votre nom d'utilisateur
-mqtt_pass = "RaspberryAD"        # Remplacez par votre mot de passe
+mqtt_user = "RaspberryAD"       
+mqtt_pass = "RaspberryAD"       
 
 # Répertoire pour stocker les photos
-photo_directory = "/var/www/html/nichoir"  # Remplacez par votre chemin
+photo_directory = "/var/www/html/nichoir"  
 max_photos = 50  # Nombre maximum de photos autorisées dans le répertoire
 
 # Liste pour stocker les données de l'image
