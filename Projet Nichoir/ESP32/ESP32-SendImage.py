@@ -7,14 +7,14 @@ import machine
 LED = machine.Pin(4,machine.Pin.OUT)
 
 # Paramètres réseau Wi-Fi
-ssid = 'Proximus-Home-3890'        # Remplacez par votre SSID Wi-Fi
-password = 'whn3ajbkbpjre'  # Remplacez par votre mot de passe Wi-Fi
+ssid = 'Proximus-Home-3890'       
+password = 'whn3ajbkbpjre' 
 
 # Paramètres du serveur Mosquitto
-mqtt_broker = "192.168.1.26"  # Remplacez par l'adresse IP de votre broker
+mqtt_broker = "192.168.1.26" 
 mqtt_port = 1883  # Le port par défaut pour MQTT est 1883
-mqtt_user = 'RaspberryAD'  # Remplacez par votre nom d'utilisateur
-mqtt_pass = 'RaspberryAD'   # Remplacez par votre mot de passe
+mqtt_user = 'RaspberryAD' 
+mqtt_pass = 'RaspberryAD'  
 topic_Photos = "ProjetNichoir_Photos"
 topic_Batterie = "ProjetNichoir_Batterie"
 
