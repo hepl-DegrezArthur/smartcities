@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie des images du nichoir</title>
+    <style>
+        /* Style pour la galerie */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px; /* Augmenter la largeur des conteneurs */
+        }
+        .battery-level {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px; /* Espacement entre le niveau de batterie et l'image */
+        }
+        .gallery img {
+            width: 100%; /* Taille des miniatures agrandie */
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1); /* Agrandissement au survol */
+        }
+    </style>
+</head>
+<body>
+    <h1>Galerie des images du nichoir</h1>
+    <div class="gallery">
+        <!-- Les images et niveaux de batterie seront ajoutés ici par JavaScript -->
+        <script>
+            const gallery = document.querySelector('.gallery');
+
+            // Charger dynamiquement les images à partir de list_images.php
+            fetch('list_images.php') // Appelle le script PHP
+                .then(response => response.json())
+                .then(imageFiles => {
+                    imageFiles.forEach(fileName => {
+                        // Extraire les informations du nom de fichier (P(x)_(bat).jpg)
+                        const matches = fileName.match(/P(\d+)_(\d+)\.jpg/); // Format attendu
+                        if (matches) {
+                            const photoNumber = matches[1]; // Numéro de la photo
+                            const batteryLevel = matches[2]; // Niveau de batterie
+
+                            // Créer un conteneur pour chaque image
+                            const container = document.createElement('div');
+                            container.className = 'image-container';
+
+                            // Ajouter un texte pour le niveau de batterie
+                            const batteryText = document.createElement('div');
+                            batteryText.className = 'battery-level';
+                            batteryText.textContent = `Batterie : ${batteryLevel}%`;
+
+                            // Créer l'élément image
+                            const img = document.createElement('img');
+                            img.src = fileName; // Utiliser le nom du fichier comme source
+                            img.alt = `Image ${photoNumber}`;
+                            img.onerror = () => container.remove(); // Supprime le conteneur si l'image n'existe pas
+
+                            // Ajouter le niveau de batterie et l'image au conteneur
+                            container.appendChild(batteryText);
+                            container.appendChild(img);
+
+                            // Ajouter le conteneur à la galerie
+                            gallery.appendChild(container);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Erreur lors de la récupération des images :', error);
+                });
+        </script>
+    </div>
+</body>
+</html>
