@@ -1,0 +1,15 @@
+<?php
+$directory = "."; // Répertoire courant
+$images = array();
+
+// Lire tous les fichiers dans le répertoire
+foreach (scandir($directory) as $file) {
+    if (preg_match('/P\d+_\d+\.jpg$/', $file)) { // Filtrer par format
+        $images[] = $file;
+    }
+}
+
+// Retourner la liste en JSON
+header('Content-Type: application/json');
+echo json_encode($images);
+?>
