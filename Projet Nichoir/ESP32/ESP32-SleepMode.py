@@ -1,22 +1,15 @@
 import machine
 import time
 
-# Définir le pin qui servira pour l'interruption
-interrupt_pin = machine.Pin(4, machine.Pin.IN, machine.Pin.PULL_UP)  # GPIO 4 avec pull-up
+PIR = machine.Pin(16, machine.Pin.IN, machine.Pin.PULL_DOWN)
+PIR.irq(trigger=machine.Pin.IRQ_RISING, handler=PIR_handler)                     # Configuration de l'interruption sur changement d'état de la pin x
+def PIR_handler(pin):                                                            # Fonction d'interruption
+    #Code d'interruption ici
 
-# Fonction à exécuter lors de l'interruption
-def handle_interrupt(pin):
-    print("Interruption détectée sur le pin :", pin)
+wake_up = machine.Pin(4, mode=machine.Pin.IN)                                    # Définir le réveil sur la pin 4
+machine.PinWake.wake_on_pin(wake_up, level=machine.PinWake.HIGH)                 # Activer le wake up de l'ESP32 depuis l'hardware sur la PIN4
 
-# Configurer l'interruption sur front descendant
-interrupt_pin.irq(trigger=machine.Pin.IRQ_FALLING, handler=handle_interrupt)
-
-# Mettre en place le réveil de l'ESP32 à partir du deep sleep
-wake_up = machine.Pin(4, mode=machine.Pin.IN)
-machine.PinWake.wake_on_pin(wake_up, level=machine.PinWake.LOW)
-
-# Mettre l'ESP32 en mode sommeil profond
-print("Entrée en deep sleep...")
-time.sleep(2)  # Petite pause pour voir le message avant de dormir
-machine.deepsleep()
+print("Le deep sleep va être activé...")                                         
+time.sleep(2)      
+machine.deepsleep()                                                              #Actvier le deep sleep
 
