@@ -67,11 +67,13 @@ def TakeAndSendPhotoAndBat():
     except Exception as e:
         print("Erreur lors de la prise ou de l'envoi de la photo :", e)
 
+'''
 # Identifier la raison du réveil
 if machine.reset_cause() == machine.DEEPSLEEP_RESET:
     print("Réveillé par une interruption externe GPIO")
 else:
     print("Réveillé pour une autre raison")
+'''
 
 # Programme principal
 connect_to_wifi()
