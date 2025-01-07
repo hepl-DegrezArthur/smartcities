@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie des images du nichoir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        #battery-status {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .image-time {
+            font-size: 12px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .delete-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #FF4D4D;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-button:hover {
+            background-color: #FF1A1A;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galerie des images du nichoir</h1>
+    <div id="battery-status">Niveau de batterie : En cours de chargement...</div>
+    <div class="gallery">
+        <!-- Les images seront ajoutÃƒÂ©es ici par JavaScript -->
+    </div>
+    <button id="delete-selected" class="delete-button">Supprimer les images sÃƒÂ©lectionnÃƒÂ©es</button>
+
+    <script>
+       const gallery = document.querySelector('.gallery');
+const batteryStatus = document.getElementById('battery-status');
+const deleteButton = document.getElementById('delete-selected');
+
+// Charger dynamiquement les images et afficher le niveau de batterie
+fetch('list_images.php')
+    .then(response => response.json())
+    .then(imageFiles => {
+        if (imageFiles.length > 0) {
+            // Trier les images par timestamp dÃ©croissant pour obtenir la plus rÃ©cente
+            imageFiles.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+            // Mettre Ã  jour le niveau de batterie avec la derniÃ¨re image
+            const latestBatteryLevel = imageFiles[0].batteryLevel;
+            batteryStatus.textContent = `Niveau de batterie : ${latestBatteryLevel}%`;
+
+            // Ajouter les images Ã  la galerie
+            imageFiles.forEach(file => {
+                const { fileName, timestamp, batteryLevel } = file;
+
+                // CrÃ©er un conteneur pour l'image
+                const container = document.createElement('div');
+                container.className = 'image-container';
+
+                // CrÃ©er l'Ã©lÃ©ment image
+                const img = document.createElement('img');
+                img.src = fileName;
+                img.alt = `Image ${fileName}`;
+                img.onerror = () => container.remove();
+
+                // Ajouter l'heure d'arrivÃ©e
+                const timeText = document.createElement('div');
+                timeText.className = 'image-time';
+                timeText.textContent = `ArrivÃ©e : ${new Date(timestamp).toLocaleString()}`;
+
+                // Ajouter une case Ã  cocher
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = fileName;
+
+                // Ajouter les Ã©lÃ©ments au conteneur
+                container.appendChild(img);
+                container.appendChild(timeText);
+                container.appendChild(checkbox);
+                gallery.appendChild(container);
+            });
+        } else {
+            batteryStatus.textContent = "Aucune image trouvÃ©e";
+        }
+    })
+    .catch(error => {
+        console.error('Erreur lors de la rÃ©cupÃ©ration des images :', error);
+        batteryStatus.textContent = "Erreur lors de lâ€™actualisation du niveau de batterie";
+    });
+
+// GÃ©rer la suppression des images sÃ©lectionnÃ©es
+deleteButton.addEventListener('click', () => {
+    const selectedCheckboxes = document.querySelectorAll('.gallery input[type="checkbox"]:checked');
+    const filesToDelete = Array.from(selectedCheckboxes).map(cb => cb.value);
+
+    if (filesToDelete.length === 0) {
+        alert("Aucune image sÃ©lectionnÃ©e !");
+        return;
+    }
+
+    // Envoyer une requÃªte pour chaque fichier
+    Promise.all(filesToDelete.map(fileName =>
+        fetch(`delete_image.php?fileName=${fileName}`, { method: 'DELETE' })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Erreur de suppression pour ${fileName}`);
+                }
+            })
+    ))
+        .then(() => {
+            // Supprimer les images de la galerie
+            selectedCheckboxes.forEach(checkbox => checkbox.parentElement.remove());
+            alert("Images supprimÃ©es avec succÃ¨s !");
+        })
+        .catch(error => {
+            console.error('Erreur lors de la suppression des images :', error);
+            alert("Erreur lors de la suppression de certaines images.");
+        });
+});
+
+    </script>
+</body>
+</html>
