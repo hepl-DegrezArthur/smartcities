@@ -1,0 +1,35 @@
+<?php
+header('Content-Type: application/json');
+
+$directory = "."; // RÃƒÂ©pertoire courant
+$images = array();
+
+// Lire tous les fichiers dans le rÃƒÂ©pertoire
+foreach (scandir($directory) as $file) {
+    if (preg_match('/P\d+_(\d+)\.jpg$/', $file, $matches)) { // Filtrer par format et capturer le niveau de batterie
+        $filePath = $directory . DIRECTORY_SEPARATOR . $file;
+        $timestamp = filemtime($filePath);
+
+        if ($timestamp === false) {
+            error_log("Impossible de rÃƒÂ©cupÃƒÂ©rer le timestamp pour le fichier : $file");
+            continue;
+        }
+
+        $batteryLevel = intval($matches[1]); // Extraire le niveau de batterie du nom du fichier
+
+        $images[] = array(
+            "fileName" => $file,
+            "timestamp" => date('c', $timestamp), // Format ISO 8601
+            "batteryLevel" => $batteryLevel      // Ajouter le niveau de batterie
+        );
+    }
+}
+
+// VÃƒÂ©rifiez si des images ont ÃƒÂ©tÃƒÂ© trouvÃƒÂ©es
+if (empty($images)) {
+    error_log("Aucune image trouvÃƒÂ©e dans le rÃƒÂ©pertoire : $directory");
+}
+
+// Retourner les images trouvÃƒÂ©es
+echo json_encode($images);
+?>
