@@ -80,15 +80,11 @@ def TakeAndSendPhotoAndBat(TauxBatterie):
         pass
 
 
-# Lecture de la valeur brute de l'ADC
-ADC_IN_Value = ADC_IN.read()
-# Conversion en tension (en volts)
-MesureVoltage = (ADC_IN_Value * 3.3) / 4095
-# Calcul de la tension réelle
-RealVoltage = MesureVoltage * ((ResistanceM + ResistanceV) / ResistanceM)
-# Calcul du pourcentage de batterie
-TauxBatterie = max(0, min(100, int(((RealVoltage - 3) / (4.4 - 3)) * 100)))
 
+ADC_IN_Value = ADC_IN.read()
+MesureVoltage = (ADC_IN_Value * 3.3) / 4095
+RealVoltage = MesureVoltage * ((ResistanceM + ResistanceV) / ResistanceM)
+TauxBatterie = max(0, min(100, int(((RealVoltage - 3) / (4.4 - 3)) * 100)))
 
 wifi.active(True)
 connect_to_wifi()
