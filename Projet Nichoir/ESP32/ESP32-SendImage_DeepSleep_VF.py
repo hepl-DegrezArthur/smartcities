@@ -30,6 +30,8 @@ SLEEP_DURATION_MS = 60 * 1000  # 60 secondes
 # Paramètres réseau Wi-Fi
 ssid = 'Proximus-Home-3890'
 password = 'whn3ajbkbpjre'
+#ssid = 'A54 de arthur'
+#password = '54Labo54'
 
 # Paramètres du serveur Mosquitto
 mqtt_broker = "192.168.1.9"
