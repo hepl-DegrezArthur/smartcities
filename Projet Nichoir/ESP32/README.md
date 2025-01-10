@@ -16,4 +16,4 @@ Vous y trouverez :
   Des améliorations peuvent être apportées pour optimiser l'activation des différents composants. L'objectif est d'éviter une consommation simultanée excessive de courant, ce qui pourrait affecter la stabilité de l'ESP32.
 
 - **Gestion des réveils par le capteur IR** :  
-  Actuellement, le capteur IR peut provoquer de multiples réveils de l'ESP32 en peu de temps, ce qui peut entraîner une surconsommation ou des comportements indésirables. Il serait alors possible de mettre en place un mécanisme pour limiter le nombre de réveils sur une période donnée.
+  Actuellement, le capteur IR peut provoquer de multiples réveils de l'ESP32 en peu de temps, ce qui peut entraîner une surconsommation ou trop de photos. Il serait alors possible de mettre en place un mécanisme pour limiter le nombre de réveils sur une période donnée.
