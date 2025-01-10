@@ -20,8 +20,8 @@ Cette deuxième version de la carte **ESP32-CAM** apporte plusieurs amélioratio
 
 Note : Toutes les connexions sont indiquées sur le PCB (à l'aide de texte ou de schémas) afin d'éviter toute erreur. 
 
-# Remarques Techniques
 
+# Remarques Techniques
 
 ## Problème de Pins sur l'ESP32-CAM
 
