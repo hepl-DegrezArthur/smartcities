@@ -18,6 +18,8 @@ Cette deuxième version de la carte **ESP32-CAM** apporte plusieurs amélioratio
 - **Nouveau logo**  
   Mise à jour du design pour meilleur rendu.
 
+Note : Toutes les connexions sont indiquées sur le PCB (à l'aide de texte ou de schémas) afin d'éviter toute erreur. 
+
 # Remarques Techniques
 
 
