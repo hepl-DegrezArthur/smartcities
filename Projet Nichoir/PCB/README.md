@@ -33,5 +33,5 @@ Ces ajustements ont été nécessaires pour éviter les dysfonctionnements et ga
 
 - **LED IR** :  
   Actuellement connectée directement à une sortie IO de l'ESP32, la LED IR ne bénéficie que d'un courant d'environ **20 mA**, ce qui est insuffisant pour une luminosité optimale.  
-  - **Proposition** : Intégrer un système basé sur un MOSFET pour augmenter le courant disponible, offrant ainsi des performances accrues à la LED IR.
+  - **Proposition** : Intégrer un système basé sur un MOSFET pour augmenter le courant disponible, offrant ainsi plus de courant à la LED IR.
 
